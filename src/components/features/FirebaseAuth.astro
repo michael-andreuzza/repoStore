@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import Firebase from "@/logos/firebase.svg";
+---
+
+<div
+  class="relative lg:col-span-2 border-b lg:border-b-0 border-dashed border-zinc-200 dark:border-zinc-700">
+  <div class="relative flex h-full flex-col overflow-hidden">
+    <div
+      class="min-h-80 border-t border-dashed border-zinc-200 dark:border-zinc-700 flex flex-col items-center justify-center relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-t z-10 from-white/70 via-white/20 dark:from-black/80 dark:via-black/20">
+      </div>
+      <Image
+        class="size-52 scale-[250%] -mb-72"
+        src={Firebase}
+        alt="Lemons Squeezy"
+      />
+    </div>
+    <div class="p-10 pb-4 order-first">
+      <p
+        class="text-lg/7 font-medium font-mono tracking-tight text-black dark:text-white text-balance">
+        Firebase authentication for sign-in and login
+      </p>
+      <p class="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
+        Seamlessly enable user sign-in and login with Firebase's secure
+        authentication system.
+      </p>
+    </div>
+  </div>
+</div>

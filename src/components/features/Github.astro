@@ -1,0 +1,122 @@
+---
+import { Image } from "astro:assets";
+import One from "@/avatars/1.svg";
+import repoStore from "@/logos/repoStore.svg";
+---
+
+<div
+  class="relative lg:col-span-3 md:border-l border-b border-dashed border-zinc-200 dark:border-zinc-700">
+  <div class="relative flex h-full flex-col overflow-hidden justify-between">
+    <div
+      class="h-full min-h-80 border-t border-dashed border-zinc-200 dark:border-zinc-700 relative flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center -mb-32">
+        <div
+          class="border border-zinc-200 dark:border-zinc-700 h-1 p-1 shadow w-64 bg-zinc-100 border-b-0 rounded-t-xl dark:bg-white/5">
+        </div>
+        <div
+          class="border border-zinc-200 dark:border-zinc-700 h-1 p-1 shadow w-72 border-b-0 bg-zinc-50 dark:bg-white/10 rounded-t-xl">
+        </div>
+        <div
+          class="border border-zinc-200 dark:border-zinc-700 p-8 rounded-xl shadow bg-white dark:bg-zinc-900">
+          <div class="flex items-center justify-center gap-4 relative z-10">
+            <div
+              class="size-20 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center rounded-full bg-zinc-50 dark:bg-zinc-900">
+              <Image
+                class="size-8 dark:invert"
+                src={repoStore}
+                alt="logo"
+              />
+            </div>
+            <div
+              class="size-12 bg-white dark:bg-white/5 flex items-center text-black dark:text-white rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-plus size-6 mx-auto"
+                ><path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                ></path><path d="M12 5l0 14"></path><path d="M5 12l14 0"
+                ></path></svg
+              >
+            </div>
+            <div class="size-20 overflow-hidden rounded-full">
+              <Image
+                class="size-20 dark:invert object-cover"
+                src={One}
+                alt="One"
+              />
+            </div>
+          </div>
+          <div class="mt-4 text-center">
+            <p class="text-sm/6 text-zinc-500 dark:text-zinc-400">
+              repoStore has invited you to collaborate
+            </p>
+            <div class="mt-4 flex items-center gap-2">
+              <button
+                class="flex items-center justify-center transition-all duration-200 transition-shadow focus:outline-none text-white bg-[#277c3b] hover:bg-[#376842] h-9 px-4 py-2 text-sm font-medium rounded-md">
+                Accept invitaction
+              </button>
+              <button
+                class="flex items-center justify-center transition-all duration-200 focus:ring-2 transition-shadow focus:outline-none text-black bg-zinc-50 hover:bg-zinc-100 focus:ring-zinc-500/50 h-9 px-4 py-2 dark:invert text-sm font-medium rounded-md">
+                Decline
+              </button>
+            </div>
+          </div>
+          <div class="mt-4 text-left">
+            <div
+              class="flex items-center gap-2 text-zinc-500 dark:text-zinc-400">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-lock size-4"
+                ><path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                ></path><path
+                  d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
+                ></path><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"
+                ></path><path d="M8 11v-4a4 4 0 1 1 8 0v4"></path></svg
+              >
+              <p class="text-xs/6">Owner of repoStore will be able to see:</p>
+            </div>
+            <ul
+              class="list-disc list-inside text-sm/6 text-zinc-500 dark:text-zinc-400 mt-2">
+              <li>Your public profile information</li>
+              <li>
+                <span class="text-blue-500">Certain activity</span> within this repository
+              </li>
+              <li>Country of request origin</li>
+              <li>Your access level for this repository</li>
+              <li>Your IP address</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-10 pb-4 order-first">
+      <p
+        class="text-lg/7 font-medium font-mono tracking-tight text-black dark:text-white text-balance">
+        Tailored dashboard with repository list
+      </p>
+      <p class="mt-2 max-w-lg text-sm/6 text-zinc-500 dark:text-zinc-400">
+        Easily manage and view your repositories through a fully configurable
+        dashboard.
+      </p>
+    </div>
+  </div>
+</div>

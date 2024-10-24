@@ -1,33 +1,155 @@
 ---
 import "../styles/global.css";
-import Metas from "./seo/Metas.astro";
-import Favicons from "./seo/Favicons.astro";
-const {
-  title = "Lexington Starter",
-  description = "#",
-  url,
-  socialImage = "/social-preview-image.png",
-  twitterImage = "/twitter-preview-image.png", // Assuming you have a separate image for Twitter
-  author = "Lexington Themes",
-} = Astro.props;
-const sanitizedTitle = title.toLowerCase().replaceAll(" ", "-");
 ---
-<Metas
-  title={title}
-  description={description.substring(0, 100)}
-  url={Astro.site
-    ? `${Astro.site}/${sanitizedTitle}`
-    : `https://lexingtonthemes.com/${sanitizedTitle}`}
-  image={socialImage}
-  author={author}
-  twitterImage={twitterImage}
+
+<meta charset="UTF-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
 />
-<Favicons/>
-<!-- HTML in your document's head -->
-<link rel="preconnect" href="https://rsms.me/" />
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+<!-- Basic Meta Tags -->
+<title>Your Website Title</title>
+<meta
+  name="description"
+  content="A brief description of your website content."
+/>
+<meta
+  name="keywords"
+  content="keyword1, keyword2, keyword3"
+/>
+<meta
+  name="author"
+  content="Your Name or Company Name"
+/>
+<!-- Favicons -->
 <link
-  href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap"
-  rel="stylesheet"
+  rel="icon"
+  href="/favicon.ico"
+  sizes="any"
 />
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link
+  rel="icon"
+  href="/icon.svg"
+  type="image/svg+xml"
+/>
+<link
+  rel="apple-touch-icon"
+  href="/apple-touch-icon.png"
+/>
+<link
+  rel="manifest"
+  href="/manifest.webmanifest"
+/>
+<!-- Favicon for IE -->
+<link
+  rel="shortcut icon"
+  href="/favicon.ico"
+  type="image/x-icon"
+/>
+<!-- Favicons for different sizes -->
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/favicon-16x16.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="48x48"
+  href="/favicon-48x48.png"
+/>
+<!-- Open Graph / Facebook -->
+<meta
+  property="og:type"
+  content="website"
+/>
+<meta
+  property="og:url"
+  content="https://www.yourwebsite.com/"
+/>
+<meta
+  property="og:title"
+  content="Your Website Title"
+/>
+<meta
+  property="og:description"
+  content="A brief description of your website content."
+/>
+<meta
+  property="og:image"
+  content="https://www.yourwebsite.com/path/to/image.jpg"
+/>
+<!-- Twitter -->
+<meta
+  property="twitter:card"
+  content="summary_large_image"
+/>
+<meta
+  property="twitter:url"
+  content="https://www.yourwebsite.com/"
+/>
+<meta
+  property="twitter:title"
+  content="Your Website Title"
+/>
+<meta
+  property="twitter:description"
+  content="A brief description of your website content."
+/>
+<meta
+  property="twitter:image"
+  content="https://www.yourwebsite.com/path/to/image.jpg"
+/>
+<!-- Canonical URL -->
+<link
+  rel="canonical"
+  href="https://www.yourwebsite.com/"
+/>
+<!-- Additional SEO -->
+<meta
+  name="robots"
+  content="index, follow"
+/>
+<meta
+  name="googlebot"
+  content="index, follow"
+/>
+<!-- Apple Touch Icon (already included in favicons, but keeping for backwards compatibility) -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon.png"
+/>
+<!-- Theme Color for Mobile Browsers -->
+<meta
+  name="theme-color"
+  content="#ffffff"
+/>
+<!-- For IE -->
+<meta
+  http-equiv="X-UA-Compatible"
+  content="IE=edge"
+/>
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+></script>
+
+<!--- Gesit font -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/michael-andreuzza/geist-font@main/fonts.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/michael-andreuzza/geist-mono@main/fonts.css"
+/>

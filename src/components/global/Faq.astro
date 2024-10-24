@@ -1,0 +1,274 @@
+---
+import StarBottomLeft from "@/components/assets/StarBottomLeft.astro";
+import StarBottomRight from "@/components/assets/StarBottomRight.astro";
+---
+
+<div
+  class="grid grid-cols-1 gap-4 md:grid-cols-3 border-x border-b border-dashed border-zinc-200 dark:border-zinc-700 p-8 relative">
+  <StarBottomLeft />
+  <StarBottomRight />
+  <div class="relative">
+    <h2
+      class="text-black dark:text-white text-2xl lg:text-3xl tracking-tight font-medium text-balance font-mono">
+      Frequently asked questions
+    </h2>
+    <div class="mt-2">
+      <p
+        class="text-sm text-zinc-500 font-medium dark:text-zinc-400 text-pretty">
+        Can't find your answer? Send <span
+          class="font-bold text-black dark:text-white">us</span
+        > and <a
+          class="underline hover:text-black dark:text-white duration-200"
+          href="#_"
+          >email</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="lg:col-span-2">
+    <div x-data="{selected:null}">
+      <ul
+        class="list-none "
+        role="list"
+        @click="open = !open">
+        <li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 1 ? selected = 1 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                What does the landing page redesign service include?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+            x-ref="container1">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              The service includes the redesign of up to 5 sections of your
+              landing page. Streamer provides custom design tailored to your
+              brand and goals, all completed within a 7 day turnaround time.
+            </div>
+          </div>
+        </li><li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 2 ? selected = 2 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                How much does the service cost?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+            x-ref="container2">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              The base service for redesigning up to 5 sections of your landing
+              page costs $699. Each additional section beyond the initial 5 is
+              priced at $99.
+            </div>
+          </div>
+        </li><li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 3 ? selected = 3 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                How long does the redesign process take?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+            x-ref="container3">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              Your landing page redesign will be completed within 5 business
+              days from the start of the project.
+            </div>
+          </div>
+        </li><li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 4 ? selected = 4 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                What if I need more than 5 sections redesigned?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+            x-ref="container4">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              No problem! We can redesign additional sections beyond the initial
+              5. Each extra section is priced at $99.
+            </div>
+          </div>
+        </li><li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 5 ? selected = 5 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                How do we communicate during the project?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+            x-ref="container5">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              Streamer uses a Discord to ensure clear communication throughout
+              the redesign process.
+            </div>
+          </div>
+        </li><li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 6 ? selected = 6 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                What if I'm not satisfied with the design?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''"
+            x-ref="container6">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              Your satisfaction is priority. Streamer offer revisions to ensure
+              you're happy with the final result. Streamer works with you to
+              make necessary adjustments within the scope of the project.
+            </div>
+          </div>
+        </li><li class="relative">
+          <button
+            class="w-full py-2 text-left focus:text-black text-zinc-500 dark:text-white"
+            @click="selected !== 7 ? selected = 7 : selected = null"
+            type="button">
+            <div class="items-center flex justify-between gap-4">
+              <p class="lg:text-base text-sm tracking-tight font-medium ">
+                Do you offer refunds?
+              </p>
+              <svg
+                class="duration-200 size-5 inline rotate-180 transform transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                :class="{'rotate-180': open, 'rotate-0': !open}">
+                <path
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class="relative overflow-hidden duration-700 max-h-0 transition-all"
+            style=""
+            x-bind:style="selected == 7 ? 'max-height: ' + $refs.container7.scrollHeight + 'px' : ''"
+            x-ref="container7">
+            <div class="text-base py-8 pt-0 text-zinc-500 dark:text-zinc-400">
+              Due to the nature of our service and the immediate start of work,
+              we don't offer refunds once the project has begun. However, we're
+              committed to delivering a design that meets your needs and
+              expectations.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

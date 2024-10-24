@@ -1,0 +1,25 @@
+---
+import StarBottomLeft from "@/components/assets/StarBottomLeft.astro";
+import StarBottomRight from "@/components/assets/StarBottomRight.astro";
+import StarTopLeft from "@/components/assets/StarTopLeft.astro";
+import StarTopRight from "@/components/assets/StarTopRight.astro";
+---
+
+<div
+  class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-end border-x border-t border-dashed border-zinc-200 dark:border-zinc-700 p-8 relative">
+  <StarTopRight />
+  <StarTopLeft />
+  <StarBottomLeft />
+  <StarBottomRight />
+  <div class="lg:col-span-2 relative">
+    <h1
+      class="text-black dark:text-white text-2xl lg:text-3xl tracking-tight font-medium text-balance font-mono">
+      Sell github repository access to your customers with Lemon Squeezy
+    </h1>
+  </div>
+  <p
+    class="text-sm text-zinc-500 font-medium dark:text-zinc-400 text-pretty relative">
+    Monetize your codebase effortlessly by providing secure and streamlined
+    GitHub repository access to your customers
+  </p>
+</div>

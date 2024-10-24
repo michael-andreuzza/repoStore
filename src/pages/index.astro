@@ -1,8 +1,19 @@
 ---
+import Logo from "@/components/global/Logo.astro";
+import Hero from "@/components/landing/Hero.astro";
+import Features from "@/components/landing/Features.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Landing from "@/components/landing/Landing.astro";
+import Testimonial from "@/components/landing/Testimonial.astro";
+import PricingStructure from "@/components/pricing/PricingStructure.astro";
+import Faq from "@/components/global/Faq.astro";
 ---
 <BaseLayout>
-  <Landing />
-  
+  <section class="relative">
+    <Logo />
+    <Hero />
+    <Features />
+    <Testimonial />
+    <PricingStructure />
+    <Faq />
+  </section>
 </BaseLayout>

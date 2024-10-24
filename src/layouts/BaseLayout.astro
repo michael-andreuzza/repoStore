@@ -1,15 +1,15 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Navigation from "../components/global/Navigation.astro";
-import Footer from "../components/global/Footer.astro";
+import Navigation from "@/components/global/Navigation.astro";
+import Footer from "@/components/global/Footer.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="selection:bg-black selection:text-white p-8 dark:selection:bg-white dark:selection:text-black">
   <head>
     <BaseHead />
   </head>
-
-  <body class="bg-white dark:bg-black">
+  <body
+    class="bg-white dark:bg-black flex flex-col min-h-screen mx-auto 2xl:max-w-7xl 2xl:borderx border-dashed border-zinc-200 dark:border-zinc-700 relative">
     <Navigation />
     <slot />
     <Footer />
