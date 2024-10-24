@@ -2,153 +2,170 @@
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 @theme {
---color-black: #1f1f1f;
---color-gray: #292929;
---color-highlight: #CEFDFE;
---font-family-sans: "Geist", sans serif;
---font-family-mono: "Geist Mono", sans serif;
-
+  --color-black: #1f1f1f;
+  --color-gray: #292929;
+  --color-highlight: #cefdfe;
+  --font-family-sans: "Geist", sans serif;
+  --font-family-mono: "Geist Mono", sans serif;
+}
+@layer components {
+  .prose-styles {
+    /* Default text color for dark theme */
+    @apply  prose-a:text-black dark:prose-a:text-white;
+    /* Base layout classes */
+    @apply prose max-w-3xl  mx-auto;
+    /* Paragraph text color for light and dark themes */
+    @apply prose-p:text-zinc-500 dark:prose-p:text-zinc-400;
+    /* Inline code text color for light and dark themes */
+    @apply prose-code:text-black dark:prose-code:text-white;
+    /* Bold text color for light and dark themes */
+    @apply prose-strong:text-black dark:prose-strong:text-white;
+    /* Ordered list text color for light and dark themes */
+    @apply prose-li:text-zinc-500 dark:prose-li:text-zinc-400;
+    /* Headings text color and font styling for light and dark themes */
+    @apply prose-headings:text-black prose-headings:font-mono dark:prose-headings:text-white prose-headings:font-medium;
+  }
 }
 @font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist';
-    src: url('/fonts/Geist-Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-UltraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist";
+  src: url("/fonts/Geist-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-UltraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-Black.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-mono: swap;
 }
 
 @font-face {
-    font-family: 'Geist Mono';
-    src: url('/fonts/GeistMono-UltraBlack.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-mono: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-mono: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-Black.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-mono: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-UltraBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-mono: swap;
 }
