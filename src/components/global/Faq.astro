@@ -4,7 +4,7 @@ import StarBottomRight from "@/components/assets/StarBottomRight.astro";
 ---
 
 <div
-  class="grid grid-cols-1 gap-4 md:grid-cols-3 border-x border-b border-dashed border-zinc-200 dark:border-zinc-700 p-8 relative">
+  class="grid grid-cols-1  gap-4 md:grid-cols-3 border-x border-b border-dashed border-zinc-200 dark:border-zinc-700 p-8 relative">
   <StarBottomLeft />
   <StarBottomRight />
   <div class="relative">
@@ -25,7 +25,7 @@ import StarBottomRight from "@/components/assets/StarBottomRight.astro";
       </p>
     </div>
   </div>
-  <div class="lg:col-span-2">
+  <div class="md:col-span-2">
     <div x-data="{selected:null}">
       <ul
         class="list-none "
