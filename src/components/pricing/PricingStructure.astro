@@ -29,8 +29,8 @@ import BackendFrontend from "./BackendFrontend.astro";
   <div
     class="grid grid-cols-1 md:grid-cols-8 items-center w-full col-span-full">
     <div
-      class="inline-flex items-center gap-3 p-8  lg:border-zinc-200 lg:col-span-3">
-      <h1 class="text-zinc-500 dark:text-zinc-400 text-sm">
+      class="inline-flex items-center gap-3 p-8 lg:border-zinc-200 col-span-3">
+      <h1 class="text-zinc-500 dark:text-zinc-400 text-xs">
         Secure Payment via
       </h1>
       <Image
@@ -39,12 +39,11 @@ import BackendFrontend from "./BackendFrontend.astro";
         alt="logo"
       />
     </div>
-    <div class="lg:ml-auto lg:col-span-5 w-full">
-      <div
-        class="flex size-full justify-between"
-       >
+    <div
+      class="lg:ml-auto col-span-full md:col-span-5 w-full h-full border-t lg:border-t-0 border-dashed border-zinc-200 dark:border-zinc-700">
+      <div class="flex size-full justify-between h-full">
         <div
-          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          class="h-full flex w-full lg:border-l border-dashed border-zinc-200 dark:border-zinc-700">
           <Image
             class="size-full scale-[50%] opacity-50 dark:invert"
             src={Paypal}
