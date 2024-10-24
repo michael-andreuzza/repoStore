@@ -1,7 +1,15 @@
 ---
+import { Image } from "astro:assets";
+import Lemon from "@/logos/lemonLarge.svg";
+import Paypal from "@/logos/paypal.svg";
+import ApplePay from "@/logos/applePay.svg";
+import GooglePay from "@/logos/googlePay.svg";
+import Mastercard from "@/logos/mastercard.svg";
+import Visa from "@/logos/visa.svg";
 import Backend from "./Backend.astro";
 import BackendFrontend from "./BackendFrontend.astro";
 ---
+
 <div
   class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 relative border border-t-none border-dashed border-zinc-200 dark:border-zinc-700">
   <div
@@ -18,4 +26,64 @@ import BackendFrontend from "./BackendFrontend.astro";
   </div>
   <Backend />
   <BackendFrontend />
+  <div
+    class="grid grid-cols-1 md:grid-cols-8 items-center w-full col-span-full">
+    <div
+      class="inline-flex items-center gap-3 p-8  lg:border-zinc-200 lg:col-span-3">
+      <h1 class="text-zinc-500 dark:text-zinc-400 text-sm">
+        Secure Payment via
+      </h1>
+      <Image
+        class="h-5 dark:invert"
+        src={Lemon}
+        alt="logo"
+      />
+    </div>
+    <div class="lg:ml-auto lg:col-span-5 w-full">
+      <div
+        class="flex size-full justify-between"
+       >
+        <div
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          <Image
+            class="size-full scale-[50%] opacity-50 dark:invert"
+            src={Paypal}
+            alt="logo"
+          />
+        </div>
+        <div
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          <Image
+            class="size-full scale-[50%] opacity-50 dark:invert"
+            src={ApplePay}
+            alt="logo"
+          />
+        </div>
+        <div
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          <Image
+            class="size-full scale-[50%] opacity-50 dark:invert"
+            src={GooglePay}
+            alt="logo"
+          />
+        </div>
+        <div
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          <Image
+            class="size-full scale-[50%] opacity-50 dark:invert"
+            src={Mastercard}
+            alt="logo"
+          />
+        </div>
+        <div
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          <Image
+            class="size-full scale-[50%] opacity-50 dark:invert"
+            src={Visa}
+            alt="logo"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
