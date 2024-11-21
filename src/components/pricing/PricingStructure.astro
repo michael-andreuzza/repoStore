@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Lemon from "@/logos/lemonLarge.svg";
+import Polar from "@/logos/polar.svg";
 import Paypal from "@/logos/paypal.svg";
 import ApplePay from "@/logos/applePay.svg";
 import GooglePay from "@/logos/googlePay.svg";
@@ -11,12 +11,15 @@ import BackendFrontend from "./BackendFrontend.astro";
 ---
 
 <div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 relative border  border-t-none border-dashed border-zinc-200 dark:border-zinc-700">
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 relative border border-t-none border-dashed border-zinc-200 dark:border-zinc-700"
+>
   <div
-    class="gap-8 p-8 flex flex-col col-span-full lg:col-span- justify-between h-full text-black dark:text-white relative border-dashed border-b border-zinc-200 dark:border-zinc-700">
+    class="gap-8 p-8 flex flex-col col-span-full lg:col-span- justify-between h-full text-black dark:text-white relative border-dashed border-b border-zinc-200 dark:border-zinc-700"
+  >
     <div>
       <p
-        class="text-black dark:text-white text-2xl lg:text-3xl tracking-tight font-medium text-balance font-mono">
+        class="text-black dark:text-white text-2xl lg:text-3xl tracking-tight font-medium text-balance font-mono"
+      >
         Simple pricing
       </p>
       <p class="text-base text-zinc-500 dark:text-zinc-400 mt-2">
@@ -27,23 +30,23 @@ import BackendFrontend from "./BackendFrontend.astro";
   <Backend />
   <BackendFrontend />
   <div
-    class="grid grid-cols-1 md:grid-cols-8 items-center w-full col-span-full">
+    class="grid grid-cols-1 md:grid-cols-8 items-center w-full col-span-full border-t border-dashed border-zinc-200 dark:border-zinc-700"
+  >
     <div
-      class="inline-flex items-center gap-3 p-8 lg:border-zinc-200 col-span-3">
-      <h1 class="text-zinc-500 dark:text-zinc-400 text-xs">
+      class="inline-flex items-center gap-3 p-8 lg:border-zinc-200 col-span-3"
+    >
+      <h1 class="text-zinc-500 dark:text-zinc-400 text-sm shrink-0">
         Secure Payment via
       </h1>
-      <Image
-        class="h-5 dark:invert"
-        src={Lemon}
-        alt="logo"
-      />
+      <Image class="h-5 dark:invert" src={Polar} alt="logo" />
     </div>
     <div
-      class="lg:ml-auto col-span-full md:col-span-5 w-full h-full border-t lg:border-t-0 border-dashed border-zinc-200 dark:border-zinc-700">
+      class="lg:ml-auto col-span-full md:col-span-5 w-full h-full border-t lg:border-t-0 border-dashed border-zinc-200 dark:border-zinc-700"
+    >
       <div class="flex size-full justify-between h-full">
         <div
-          class="h-full flex w-full lg:border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          class="h-full flex w-full lg:border-l border-dashed border-zinc-200 dark:border-zinc-700"
+        >
           <Image
             class="size-full scale-[50%] opacity-50 dark:invert"
             src={Paypal}
@@ -51,7 +54,8 @@ import BackendFrontend from "./BackendFrontend.astro";
           />
         </div>
         <div
-          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700"
+        >
           <Image
             class="size-full scale-[50%] opacity-50 dark:invert"
             src={ApplePay}
@@ -59,7 +63,8 @@ import BackendFrontend from "./BackendFrontend.astro";
           />
         </div>
         <div
-          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700"
+        >
           <Image
             class="size-full scale-[50%] opacity-50 dark:invert"
             src={GooglePay}
@@ -67,7 +72,8 @@ import BackendFrontend from "./BackendFrontend.astro";
           />
         </div>
         <div
-          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700"
+        >
           <Image
             class="size-full scale-[50%] opacity-50 dark:invert"
             src={Mastercard}
@@ -75,7 +81,8 @@ import BackendFrontend from "./BackendFrontend.astro";
           />
         </div>
         <div
-          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700">
+          class="h-full flex w-full border-l border-dashed border-zinc-200 dark:border-zinc-700"
+        >
           <Image
             class="size-full scale-[50%] opacity-50 dark:invert"
             src={Visa}
