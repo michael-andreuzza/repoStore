@@ -4,20 +4,25 @@ import repoStore from "@/logos/repoStore.svg";
 ---
 
 <div
-  class="ml-auto relative flex w-full border-x border-t justify-between border-dashed border-zinc-200 hover:bg-white/15 dark:hover:bg-white/10 dark:border-zinc-700">
+  class="ml-auto relative flex w-full border-x border-t justify-between border-dashed border-zinc-200 hover:bg-white/15 dark:hover:bg-white/10 dark:border-zinc-700"
+>
   <div class="size-14 pl-8">
-   <a href="/">
-      <Image
-        class="size-14 dark:invert"
-        src={repoStore}
-        alt="logo"
-      />
-   </a>
+    <a href="/">
+      <Image class="size-14 dark:invert" src={repoStore} alt="logo" />
+    </a>
   </div>
-  <a
-    href="#_"
-    class="text-black dark:text-white uppercase text-right items-center text-sm px-8 border-l font-mono font-medium border-dashed border-zinc-200 hover:bg-white/15 dark:hover:bg-white/10 dark:border-zinc-700 bg-white/30 dark:bg-white/5 inline-flex w-auto h-14">
-    login</a
-  >
-
+  <div class="flex">
+    <a
+      href="#_"
+      class="text-black dark:text-white uppercase text-right items-center text-xs sm:text-sm px-8 border-l font-mono font-medium border-dashed border-zinc-200 hover:bg-white/15 dark:hover:bg-white/10 dark:border-zinc-700 bg-white/30 dark:bg-white/5 inline-flex w-auto h-14"
+    >
+      Astro & Tailwind templates</a
+    >
+    <a
+      href="#_"
+      class="text-black dark:text-white uppercase text-right items-center text-xs sm:text-sm px-8 border-l font-mono font-medium border-dashed border-zinc-200 hover:bg-white/15 dark:hover:bg-white/10 dark:border-zinc-700 bg-white/30 dark:bg-white/5 inline-flex w-auto h-14"
+    >
+      login</a
+    >
+  </div>
 </div>
